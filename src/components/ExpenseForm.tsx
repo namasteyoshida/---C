@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import type { Expense, Category } from "./Expense";
-import "./ExpenseForm.css";
+import type { Category, Expense } from "../types";
+
 
 type ExpenseFormProps = {
   onAdd: (expense: Omit<Expense, "id" | "approved">) => void;

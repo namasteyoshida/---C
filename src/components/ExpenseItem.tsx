@@ -1,4 +1,4 @@
-import "./ExpenseItem.module.css";
+import styles from "./ExpenseItem.module.css";
 import type { Expense } from "../types";
 
 /* 【型エイリアス】型定義 */
@@ -20,8 +20,8 @@ export default function ExpenseItem({
 
   /* 画面の表示内容 */
   return (
-    <li className="expense-item">
-      <h3>{expense.title}</h3>
+    <li className={styles.expenseItem}>
+      <h3 className={styles.title}>{expense.title}</h3>
 
       <p>カテゴリ：{expense.category}</p>
 
@@ -33,7 +33,7 @@ export default function ExpenseItem({
           /* 【三項演算子】
           金額が10,000円以上の場合、クラス名をつけて強調表示 */
           className={
-            expense.amount >= 10000 ? "high-amount" : ""
+            expense.amount >= 10000 ? styles.highAmount : ""
           }
         >
           ¥{expense.amount.toLocaleString()}
@@ -42,7 +42,7 @@ export default function ExpenseItem({
         {/* 【三項演算子】
         金額が10,000円以上の場合、(高額経費)と表示 */}
         {expense.amount >= 10000 && (
-          <span className="high-amount-label">
+          <span className={styles.hignAmountLabel}>
             （高額経費）
           </span>
         )}
@@ -55,13 +55,13 @@ export default function ExpenseItem({
       {/* 【三項演算子】∵ JSXの中ではif文が書けない */}
       {expense.approved ? (
         /* expense.approvedがtrueの場合 */
-        <span className="approved">
+        <span className={styles.approved}>
           ✔ 承認済み
         </span>
       ) : (
         /* expense.approvedがfalseの場合 */
         <button
-          className="approve-button"
+          className={styles.approveButton}
           /* ボタンがクリックされたらexpense.idの経費を承認する */
           onClick={() => onApprove(expense.id)}
         >

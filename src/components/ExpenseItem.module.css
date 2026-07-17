@@ -1,0 +1,43 @@
+.expense-item {
+  list-style: none;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: #ffffff;
+}
+
+.expense-item h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.expense-item p {
+  margin: 6px 0;
+}
+
+.high-amount {
+  color: red;
+  font-weight: bold;
+}
+
+.high-amount-label {
+  color: red;
+  font-size: 0.9rem;
+  margin-left: 8px;
+}
+
+.approved {
+  color: green;
+  font-weight: bold;
+}
+
+.approve-button {
+  margin-top: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.approve-button:hover {
+  background-color: #f2f2f2;
+}

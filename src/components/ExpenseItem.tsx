@@ -48,6 +48,10 @@ export default function ExpenseItem({
         )}
       </p>
 
+      {/* 【AND演算子】
+      メモが記入されている場合、<p>タグ内に表示
+      ∵ ExpenseForm.tsxのYupにおいてmemoキーは.notRequired()であり任意
+      ∵ Expense.tsのExpense型オブジェクトのインターフェイスにおいてmemoキーはオプショナル */}
       {expense.memo && (
         <p>メモ：{expense.memo}</p>
       )}

@@ -12,7 +12,7 @@ type ExpenseListProps = {
 
 /* Reactコンポーネントを作るための関数 */
 export default function ExpenseList({
-  /* ExpenseItemProps型のオブジェクト */
+  /* ExpenseListProps型のオブジェクト */
   /* 初期値設定の必要なし */
   expenses,
   onApprove,
@@ -28,7 +28,7 @@ export default function ExpenseList({
 
   /* 配列の中身がある(経費情報が1つ以上ある)場合の処理 */
   return (
-    <ul className="expense-list">
+    <ul>
       {/* 【.map()メソッド】配列の中身を1つ1つ取り出して実行する処理 */}
       {expenses.map((expense) => (
         /* ExpenseItemコンポーネントにProps(値)を渡している */

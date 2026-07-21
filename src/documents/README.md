@@ -105,7 +105,11 @@ src
 ├── types.ts
 ├── App.css
 ├── App.tsx
-└── main.tsx
+├── main.tsx
+└── utils
+    ├── calcSummary.ts
+    ├── filterExpensesByCategory.ts
+    └── sortExpensesByAmount.ts
 ```
 
 ---
